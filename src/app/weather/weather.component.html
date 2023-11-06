@@ -1,0 +1,9 @@
+<div class="weather">
+    <h2>Weather for {{ selectedCountry }}</h2>
+    <div *ngIf="weatherData">
+      <p>Temperature: {{ weatherData.main.temp }}°C</p>
+      <p>Humidity: {{ weatherData.main.humidity }}%</p>
+      <p>Wind: {{ weatherData.wind.speed }} m/s</p>
+    </div>
+  </div>
+  

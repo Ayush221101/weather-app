@@ -1,0 +1,17 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class WeatherService {
+  private apiKey = '01418793ab24f84de58bbb50876848b4';
+
+  constructor(private http: HttpClient) {}
+
+  getWeather(country: string): Observable<any> {
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${country}&APPID=${this.apiKey}`;
+    return this.http.get(apiUrl);
+  }
+}

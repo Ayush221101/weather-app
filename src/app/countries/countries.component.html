@@ -1,0 +1,9 @@
+<div class="countries">
+    <h2>Countries</h2>
+    <ul>
+      <li *ngFor="let country of countries">
+        <a [routerLink]="['/weather', country.name]">{{ country.name }}</a>
+      </li>
+    </ul>
+  </div>
+  
